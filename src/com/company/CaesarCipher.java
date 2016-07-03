@@ -6,8 +6,8 @@ package com.company;
 
 public class CaesarCipher
 {
-	String alphabetUp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	String alphabetLow = "abcdefghijklmnopqrstuvwxyz";
+	private static final String alphabetUp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	private static final String alphabetLow = "abcdefghijklmnopqrstuvwxyz";
 
 	public String encrypt(String input, int key)
 	{

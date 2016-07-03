@@ -39,7 +39,7 @@ public class CaesarCipherTest extends TestCase {
 		assertEquals(answer, c.encrypt(input, key));
 	}
 
-	public void testEncrypt4() throws Exception
+	public void testEncryptWithTwoKeys1() throws Exception
 	{
 		CaesarCipher c = new CaesarCipher();
 
@@ -47,6 +47,18 @@ public class CaesarCipherTest extends TestCase {
 		int key1 = 23;
 		int key2 = 17;
 		String answer = "Czojq Ivdzle";
+
+		assertEquals(answer, c.encryptTwoKeys(input, key1, key2));
+	}
+
+	public void testEncryptWithTwoKeys2() throws Exception
+	{
+		CaesarCipher c = new CaesarCipher();
+
+		String input = "FIRST LEGION";
+		int key1 = 23;
+		int key2 = 17;
+		String answer = "CZOJQ IVDZLE";
 
 		assertEquals(answer, c.encryptTwoKeys(input, key1, key2));
 	}
