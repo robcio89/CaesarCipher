@@ -1,3 +1,4 @@
+import com.company.CaesarCipher;
 import junit.framework.TestCase;
 
 /**
@@ -36,5 +37,17 @@ public class CaesarCipherTest extends TestCase {
 		String answer = "Wzijk Cvxzfe";
 
 		assertEquals(answer, c.encrypt(input, key));
+	}
+
+	public void testEncrypt4() throws Exception
+	{
+		CaesarCipher c = new CaesarCipher();
+
+		String input = "First Legion";
+		int key1 = 23;
+		int key2 = 17;
+		String answer = "Czojq Ivdzle";
+
+		assertEquals(answer, c.encryptTwoKeys(input, key1, key2));
 	}
 }
